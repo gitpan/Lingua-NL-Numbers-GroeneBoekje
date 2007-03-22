@@ -1,4 +1,4 @@
-# -*- mode: cperl; coding: utf-8 -*-
+# -*- mode: cperl -*-
 
 my $tests;
 BEGIN {
@@ -8,25 +8,25 @@ BEGIN {
           10 => "tien",
           12 => "twaalf",
           20 => "twintig",
-          22 => "tweeÃ«ntwintig",
+          22 => "tweeëntwintig",
          100 => "honderd",
          102 => "honderdtwee",
 	 120 => "honderdtwintig",
 	 200 => "tweehonderd",
 	 220 => "tweehonderdtwintig",
-	 222 => "tweehonderdtweeÃ«ntwintig",
+	 222 => "tweehonderdtweeëntwintig",
 	1000 => "duizend",
 	1002 => "duizend twee",
 	1020 => "duizend twintig",
-	1022 => "duizend tweeÃ«ntwintig",
+	1022 => "duizend tweeëntwintig",
 	1900 => "negentienhonderd",
 	1902 => "negentienhonderdtwee",
 	1920 => "negentienhonderdtwintig",
-	1922 => "negentienhonderdtweeÃ«ntwintig",
+	1922 => "negentienhonderdtweeëntwintig",
 	2000 => "tweeduizend",
 	2002 => "tweeduizend twee",
 	2020 => "tweeduizend twintig",
-	2022 => "tweeduizend tweeÃ«ntwintig",
+	2022 => "tweeduizend tweeëntwintig",
        10000 => "tienduizend",
       100000 => "honderdduizend",
       101000 => "honderdeenduizend",

@@ -1,4 +1,4 @@
-#!/usr/bin/perl --	-*- type: cperl; coding: utf-8 -*-
+#!/usr/bin/perl --
 
 package Lingua::NL::Numbers::GroeneBoekje;
 
@@ -40,10 +40,10 @@ the "Groene Boekje". For example:
 Estimated upper bound is 10**18 - 1, but this is not checked.
 
 When "twee" is glued to "en" it will get a dieraesis on the "e" of "en".
-The result will be a Perl UTF-8 string.
+The result will be a Perl Unicode string.
 
 When "drie" is glued to "en" it will get a dieraesis on the "e" of "en".
-The result will be a Perl UTF-8 string.
+The result will be a Perl Unicode string.
 
 =head1 AUTHOR
 
@@ -57,7 +57,7 @@ http://woordenlijst.org/leidraad/6/9/
 
 =cut
 
-$VERSION = 0.01;
+$VERSION = "0.10";
 
 use strict;
 use warnings;
@@ -88,7 +88,7 @@ my @tens =
        vijftig zestig zeventig tachtig negentig) );
 
 # Regel 6.N
-# We schrijven een getal in Ã©Ã©n woord, tot en met het woord duizend.
+# We schrijven een getal in één woord, tot en met het woord duizend.
 
 sub _num_ {
     my ($n) = @_;
@@ -102,7 +102,7 @@ sub _num_ {
 	my $res = "";
 	if ( my $r = $n % 10 ) {
 	    $res = $units[$r] . "en";
-	    $res =~ s/([ie])ee/$1."eÃ«"/e;
+	    $res =~ s/([ie])ee/$1."eë"/e;
 	}
 	return $res.$tens[$t];
     }
